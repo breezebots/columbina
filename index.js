@@ -2,6 +2,11 @@ const { Client, GatewayIntentBits, Collection } = require('discord.js');
 const { joinVoiceChannel, createAudioPlayer, createAudioResource, AudioPlayerStatus, VoiceConnectionStatus } = require('@discordjs/voice');
 const playdl = require('play-dl');
 require('dotenv').config();
+playdl.setToken({
+  youtube: {
+    cookie: process.env.YT_COOKIE
+  }
+});
 
 // ============================================================
 //  🎭 COLUMBINA — Discord Music Bot
